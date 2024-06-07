@@ -1,4 +1,6 @@
 # Composite GitHub Actions
+**This is a public repository.**  Think carefully about what you put in here.
+
 Ensure you tag releases, e.g.:
 
 ```sh
