@@ -1,0 +1,16 @@
+name: setup-git-for-private-repo-access
+description: Set up git config for private repos
+
+inputs:
+  token:
+    description: 'A Github PAT'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up git config for private repos
+      env:
+        TOKEN: ${{ inputs.token }}
+      run: git config --global url."https://user:${TOKEN}@github.com".insteadOf "https://github.com"
+      shell: bash
